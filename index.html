@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background-color: lightblue;
+        color: pink;
+        font-size: 30px;
+      }
+      .abc{
+        display: inline;/*It helps to make all items in one line*/
+        width: 1200px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .def{
+        color: wheat;
+      }
+      .def:hover{
+        color: aquamarine;
+        font-size: 40px;
+      }
+      #div1{
+        height: 900px;
+        width:100%;
+        animation-name: Littoo;
+        animation-duration: 10s;/*It is used to specify the time duration of animation*/
+        animation-iteration-count: infinite;/*It is used to speicify how many times you want the animation to run*/
+        animation-direction: alternate;/*It is used to specify the flow of animation*/
+        background-size: cover;;
+      }
+      
+      @keyframes Littoo{
+          0%{background-image: url("https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/u5nhbhzo5wzbl318ozuj"); height: 900px; width: 1500px; background-size: cover;}
+          50%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GcuyQnAabi7DOYdkQY2TsXPdONAGQwGKIrk_hMgozGt3JjaOjN9fNRTvljDy-aSbWns&usqp=CAU"); height: 900px; width: 1500px; background-size: cover;}
+          100%{background-image: url("https://littoo.in/images/food-12.jpg"); height: 900px; width: 1500px; background-size: cover;}
+      }
+    .container{
+    height: 100px;
+    width:100%;
+    display: grid;/*It is used to put divisions of container in Grid*/
+    grid-template-columns: auto auto auto;/*It is used to specify in how many columns we want to arrange divisions*/
+    grid-column-gap: 50px;/*It is used to give gaps between the columns*/
+    grid-row-gap: 50px;/*It is used to give gaps between rows*/
+  }
+  .abc1{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-style: groove;
+    border-color: red;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+      <ul style="list-style-type: none;background-color: brown;">
+          <li class="abc">
+            <img src="https://th.bing.com/th/id/OIP.pV0JZNyvWlL7_LNy6WIecgAAAA?pid=ImgDet&rs=1" height="90" width="150">
+          </li>
+          <li class="abc">
+            <a class="def" href="index.html">Home</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Ourstory.html">Our story</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Menu.html">Menu</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Offers.html">Offers</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Gallery.html">Gallery</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Newarrivals.html">New arrivals</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="OrderNow.html">Order Now</a>
+          </li>
+      </ul>
+      <div id="div1"></div>
+      <div class="container">
+        <div class="abc1">
+          <img src="https://th.bing.com/th/id/R.603b6e609f9ed8e8f4a32f9e419d461f?rik=QfkPNp0AG80OsQ&riu=http%3a%2f%2f2.bp.blogspot.com%2f-kirfHH1_8H0%2fViURJct27YI%2fAAAAAAADuxA%2fbvA2DP72jY8%2fs1600%2f1.JPG&ehk=Mzri6uKPI8WRMxGrwLBLchn6QwgIW52PeFMrin5hFjE%3d&risl=&pid=ImgRaw&r=0" height="300" width="500">
+          <p> Desi Ghee Atta Halwa </p>
+        </div>
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/R.6d399f54e7b44d1beb5da40164624994?rik=S2JnKfw7R9xEUw&riu=http%3a%2f%2fwww.rachnas-kitchen.com%2fwp-content%2fuploads%2f2014%2f09%2flitti-chokha.jpg&ehk=S%2bj6oVIAhxEspt%2bMJmqqA%2f8y1KVlqYLi%2bPVtb3AM7eg%3d&risl=&pid=ImgRaw&r=0" height="300" width="500">
+        <p>Aloo Litti Chokha</p>
+        </div>
+        <div class="abc1">
+        <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/05/Aam-Panna-3.jpg" height="300" width="500">
+        <p>Aam Paana </p>
+        </div>
+        <div class="abc1"> 
+        <img src="https://thumbs.dreamstime.com/b/cooked-fish-rice-vegetables-white-isolated-background-cooked-fish-rice-vegetables-125174588.jpg" height="300" width="500">
+        <p> Besam Fish Veg Small</p>
+        </div>     
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/OIP.xm0g0J7EcZZQRQBWkB5fnQAAAA?pid=ImgDet&rs=1" height="300" width="500">
+        <p>Sattu Paratha</p>
+        </div>    
+        <div class="abc1">
+        <img src="https://s3-eu-west-1.amazonaws.com/images.linnlive.com/8030ba7670e7ecd1ea3f6e9854717f23/e4038c34-e8d6-4fbf-97b5-e8b76afd08a2.jpg" height="300" width="500">
+        <p>Aloo Bujia Mix </p>
+        </div>
+        <div class="abc1">
+        <img src="https://i1.wp.com/cdn.whatsuplife.in/gurgaon/blog/2017/05/Ardor-29-thali.jpeg" height="300" width="500">
+        <p>Thali Warrior</p>
+        </div>
+        <div class="abc1">
+        <img src="https://www.whiskaffair.com/wp-content/uploads/2020/09/Aloo-Tikki-2-3.jpg" height="300" width="500">
+        <p>Aloo Tikki </p>
+        </div>
+        <div class="abc1">
+        <img src="https://bakingmischief.com/wp-content/uploads/2019/06/banana-milkshake-picture.jpg" height="300" width="500">
+        <p>Banana Shake</p>
+          </div>
+      </div>
+  
+</body>
+</html>

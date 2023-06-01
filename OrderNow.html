@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>JavaScript User Registration Validation</title>
+            <h1 align="center" color="red">User Registration</h1>
+            <style>
+                body
+                {
+                    background-color:indigo;
+                    color:white;
+                    font-size:30px;
+                    font-family: "Times New Roman", Times, serif;
+                }
+                
+                input:invalid
+                {
+                      border: 2px solid red;
+                }
+                input:valid
+                {
+                    border:2px solid aqua;
+                } 
+                td.vld
+                {
+                    color:red;
+                }
+                select
+                {
+                    font-size:20px;
+                }
+                .abc{
+            display: inline;/*It helps to make all items in one line*/
+            width: 1200px;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+          .def{
+            color: wheat;
+          }
+          .def:hover{
+            color: aquamarine;
+            font-size: 40px;
+          }
+            </style>
+        <nav>
+          <ul style="list-style-type: none;background-color: brown;">
+              <li class="abc">
+                <img src="https://th.bing.com/th/id/OIP.pV0JZNyvWlL7_LNy6WIecgAAAA?pid=ImgDet&rs=1" height="90" width="150">
+            </li>
+              <li class="abc">
+                <a class="def" href="index.html">Home</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="Ourstory.html">Our story</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="Menu.html">Menu</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="Offers.html">Offers</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="Gallery.html">Gallery</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="Newarrivals.html">New arrivals</a>
+              </li>
+              <li class="abc">
+                <a class="def" href="OrderNow.html">Order Now</a>
+              </li>
+          </ul>
+        </nav>
+            <script>
+                function validate()
+                {
+                    if(document.form1.FName.value=="")
+                    {
+                        document.getElementById("fnv").innerHTML="*Please Enter Your full Name";
+                        document.form1.FName.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("fnv").innerHTML="";
+                        
+                    }
+                    if(document.form1.Email.value=="")
+                    {
+                        document.getElementById("ev").innerHTML="*Please Enter Your Email Address";
+                        document.form1.Email.focus();
+                        return false;
+                    }
+                    var emailID=document.form1.Email.value;
+                    atpos=emailID.indexOf("@");
+                    dotpos=emailID.lastIndexOf(".");
+                    if(atpos<1 || (dotpos-atpos < 2))
+                    {
+                        document.getElementById("ev").innerHTML="*Please Enter Proper Email Address";
+                        document.form1.Email.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("ev").innerHTML="";
+                    }
+                    var num=document.form1.Mobile.value;
+                    if(num=="")
+                    {
+                        document.getElementById("mv").innerHTML="*Please enter Mobile Number";
+                        document.form1.Mobile.focus();
+                        return false;
+                    } 
+                    else if(num.length != 10 || isNaN(num))
+                    {
+                        document.getElementById("mv").innerHTML="*Please enter valid mobile Number";
+                        document.form1.Mobile.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("mv").innerHTML="";
+                    }
+                    var dob=document.form1.DOB.value;
+                    re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+                    if(dob=="" || dob=="dd/mm/yyyy")
+                    {
+                        document.getElementById("dobv").innerHTML="Please Enter Your Date of Birth";
+                        return false;
+                    }
+                    /*else if(!dob.match(re))
+                    {
+                        document.getElementById("dobv").innerHTML="Please Enter Date of Birth in dd/mm/yyyy format";
+                        return false;
+                    } */
+                    else
+                    {
+                        document.getElementById("dobv").innerHTML="";
+                    }
+                    if(document.form1.UName.value=="")
+                    {
+                        document.getElementById("uv").innerHTML="*Please enter User Name";
+                        document.form1.UName.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("uv").innerHTML="";
+                    }
+                    var p=document.form1.Password.value;
+                    var cp=document.form1.CPassword.value;
+                    if(p=="" || p.length<=6)
+                    {
+                        document.getElementById("pv").innerHTML="*Please Enter Password more than 6 characters";
+                        document.form1.Password.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("pv").innerHTML="";	
+                    }
+                    if(p != cp)
+                    {
+                        document.getElementById("cpv").innerHTML="*Password and Confirm password must be same";
+                        var cp=document.form1.CPassword.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("cpv").innerHTML="";
+                    }
+                    
+                    var g=document.getElementsByName("radio1");
+                    if(g[0].checked == true)
+                    {
+                        document.getElementById("rgen").innerHTML="";
+                    }
+                    else if(g[1].checked == true)
+                    {
+                        document.getElementById("rgen").innerHTML="";
+                    }
+                    else
+                    {
+                        document.getElementById("rgen").innerHTML="Please select your Gender";
+                        return false
+                    }
+                        
+                    if(document.form1.Pincode.value=="" || document.form1.Pincode.value.length != 6)
+                    {
+                        document.getElementById("pinv").innerHTML="*Please Enter Valid Pincode/Zipcode";
+                        document.form1.Pincode.focus();
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("pinv").innerHTML="";	
+                    }
+                    if(document.form1.Country.value == -1)
+                    {
+                        document.getElementById("cv").innerHTML="*Please select country Name";
+                        return false;
+                    }
+                    else
+                    {
+                        document.getElementById("cv").innerHTML="";
+                    }	
+                    
+                    return true;
+                    
+                }
+                
+                
+            </script>
+        </head>
+        <body>
+            <form action="" method="POST" name="form1" onsubmit ="return(validate());">
+                <table cellspacing = "2" cellpadding = "2" align="center">
+                <tr>
+                    <td align="right">Full Name:</td>
+                    <td><input type="text" name="FName" size="40" autofocus /></td>
+                    <td id="fnv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">E-mail:</td>
+                    <td><input type="text" name="Email" size="40" /></td>
+                    <td id="ev" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">Mobile No:</td>
+                    <td><input type="text" name="Mobile" size="40" maxlength="10" /></td>
+                    <td id="mv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">Date of Birth:</td>
+                    <td><input type="date" name="DOB" size="40" /></td>
+                    <td id="dobv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">User Name:</td>
+                    <td><input type="text" name="UName" size="40" /></td>
+                    <td id="uv" class="vld"td>
+                </tr>
+                <tr>
+                    <td align="right">Password:</td>
+                    <td><input type="password" name="Password" size="40" /></td>
+                    <td id="pv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">Confirm Password:</td>
+                    <td><input type="password" name="CPassword" size="40" /></td>
+                    <td id="cpv" class="vld"></td>
+                </tr>
+                
+                <tr>
+                    <td align="right">Gender:</td>
+                    <td>
+                        Male 
+                        <input type="radio" name="radio1" value="Male" onclick="reset_msg()" /> &nbsp
+                        Female 
+                        <input type="radio" name="radio1" value="Female" onclick="reset_msg()" /><br/>
+                    </td>
+                    <td id="rgen" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">Pincode:</td>
+                    <td><input type="text" name="Pincode" maxlength="6" size="40" ></td>
+                    <td id="pinv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right">Country:</td>
+                    <td>
+                        <select name="Country">
+                        <option value="-1" selected>choose your country</option>
+                        <option value="1">India</option>
+                        <option value="2">USA</option>
+                        <option value="3">UK</option>
+                        <option value="4">Germany</option>
+                        <option value="5">Japan</option>
+                                            
+                        </select>
+                    </td>
+                    <td id="cv" class="vld"></td>
+                </tr>
+                <tr>
+                    <td align="right"></td>
+                    <td>
+                        <input type="submit" style="font-size:20px" value="Submit">
+                        <input type="reset" style="font-size:20px" value="Reset">
+                    </td>
+                </tr>
+                
+                
+            </form>
+            <noscript>
+                <h1>JavaScript is not enabled in your browser<br/>
+                    Please enable it .
+                </h1>
+            </noscript>
+        </body>
+    </html>

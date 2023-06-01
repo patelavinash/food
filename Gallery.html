@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        background-color: blueviolet;
+        color: pink;
+        font-size: 30px;
+      }
+      .abc{
+        display: inline;/*It helps to make all items in one line*/
+        width: 1200px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .def{
+        color: wheat;
+      }
+      .def:hover{
+        color: aquamarine;
+        font-size: 40px;
+      }
+      #div1{
+        height: 900px;
+        width:100%;
+        animation-name: Littoo;
+        animation-duration: 10s;/*It is used to specify the time duration of animation*/
+        animation-iteration-count: infinite;/*It is used to speicify how many times you want the animation to run*/
+        animation-direction: alternate;/*It is used to specify the flow of animation*/
+        background-size: cover;;
+      }
+      
+      @keyframes Littoo{
+          0%{background-image: url("https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/u5nhbhzo5wzbl318ozuj"); height: 900px; width: 1500px; background-size: cover;}
+          50%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GcuyQnAabi7DOYdkQY2TsXPdONAGQwGKIrk_hMgozGt3JjaOjN9fNRTvljDy-aSbWns&usqp=CAU"); height: 900px; width: 1500px; background-size: cover;}
+          100%{background-image: url("https://littoo.in/images/food-12.jpg"); height: 900px; width: 1500px; background-size: cover;}
+      }
+    .container{
+    height: 100px;
+    width:100%;
+    display: grid;/*It is used to put divisions of container in Grid*/
+    grid-template-columns: auto auto auto;/*It is used to specify in how many columns we want to arrange divisions*/
+    grid-column-gap: 50px;/*It is used to give gaps between the columns*/
+    grid-row-gap: 50px;/*It is used to give gaps between rows*/
+  }
+  .abc1{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-style: groove;
+    border-color: red;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+      <ul style="list-style-type: none;background-color: brown;">
+          <li class="abc">
+            <img src="https://th.bing.com/th/id/OIP.pV0JZNyvWlL7_LNy6WIecgAAAA?pid=ImgDet&rs=1" height="90" width="150">
+          </li>
+          <li class="abc">
+            <a class="def" href="index.html">Home</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Ourstory.html">Our story</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Menu.html">Menu</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Offers.html">Offers</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Gallery.html">Gallery</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="Newarrivals.html">New arrivals</a>
+          </li>
+          <li class="abc">
+            <a class="def" href="OrderNow.html">Order Now</a>
+          </li>
+      </ul>
+      <div id="div1"></div>
+      <div class="container">
+        <div class="abc1">
+        <img src="https://www.madhuseverydayindian.com/wp-content/uploads/2020/06/crispy-dosa-recipe.jpg" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/OIP.6w10F86Y8hEIucFCsdQ3NgHaLG?pid=ImgDet&rs=1" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://foodiewish.com/wp-content/uploads/2020/05/Medu-Vada-Recipe-1.jpg" height="300" width="500">
+        </div>
+        <div class="abc1"> 
+        <img src="https://images.assettype.com/thequint/2016-01/d0ce6f0f-38dc-4714-998e-a73af532f395/pani-ouri-hero.jpg" height="300" width="500">
+        </div>     
+        <div class="abc1">
+        <img src="https://www.cookingclassy.com/wp-content/uploads/2021/01/butter-chicken-4.jpg" height="300" width="500">
+        </div>    
+        <div class="abc1">
+        <img src="https://wallpaperaccess.com/full/4622468.jpg" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://cdn.cdnparenting.com/articles/2020/02/31113528/PUTTU-RECIPE.jpg" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/pongal-ven-pongal.jpg" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/OIP.26hT9mw_ItGHgSCWtU4udQHaE8?pid=ImgDet&rs=1" height="300" width="500">
+          </div>
+        <div class="abc1">
+        <img src="https://i1.wp.com/vegecravings.com/wp-content/uploads/2017/03/samosa-recipe-step-by-step-instructions.jpg?fit=1801%2C1717&ssl=1" height="300" width="500">
+        </div>
+         <div class="abc1">
+        <img src="https://www.adequatetravel.com/blog/wp-content/uploads/2021/06/Vada-Pav-768x768.jpg" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/OIP.fRZW1j0fLNdRzYyxRcu8wgHaFj?pid=ImgDet&rs=1" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://th.bing.com/th/id/R.7f0a03ebc5c1c2a17ef2df575ccce589?rik=YqkGYM9mICgVNg&riu=http%3a%2f%2fwww.funfoodfrolic.com%2fwp-content%2fuploads%2f2013%2f08%2fPaneer-Gulab-Jamun-2.jpg&ehk=kv1N%2bR9Ow21Ofk%2bw3%2bfEbskrC1f9hACuXSw9gkA2Btw%3d&risl=&pid=ImgRaw&r=0" height="300" width="500">
+        </div>
+        <div class="abc1">
+        <img src="https://www.cookclickndevour.com/wp-content/uploads/2017/04/mango-falooda-recipe-c-683x1024.jpg" height="300" width="500">
+        </div>
+      </div>
+  
+</body>
+</html>
